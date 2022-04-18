@@ -15,8 +15,6 @@ static const struct option long_options[] = {
 
 int id_debug_mask = 0;
 
-struct id_data id_data;
-
 int main(int argc, char *argv[])
 {
 	int opt;
@@ -25,6 +23,7 @@ int main(int argc, char *argv[])
 	int long_idx;
 	char *p;
 	int ret;
+	struct id_data id_data;
 
 	while ((opt = getopt_long(argc, argv, "d::i:", long_options, &long_idx)) != -1) {
 		switch(opt) {
